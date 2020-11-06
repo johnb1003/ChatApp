@@ -113,7 +113,7 @@ function connectChat(code) {
     $('#current-code').text(`Current Code: ${code}`);
     let socket = new SockJS(baseAPIURL+'chat');
     stompClient = Stomp.over(socket);
-    stompClient.connect({}, (frame) => {
+    stompClient.connect({'login': globalUserName}, (frame) => {
         console.log(`Connected to: ${frame}`);
         // Subscribe to proper chat room
         
