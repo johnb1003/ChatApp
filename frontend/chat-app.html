@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- SockJS and STOMP Links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.0/sockjs.min.js" integrity="sha512-5yJ548VSnLflcRxWNqVWYeQZnby8D8fJTmYRLyvs445j1XmzR8cnWi85lcHx3CUEeAX+GrK3TqTfzOO6LKDpdw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js" integrity="sha512-iKDtgDyTHjAitUDdLljGhenhPwrbBfqTKWO1mkhSFH3A7blITC9MhYon6SjnMhp4o0rADGw9yAC6EW4t5a4K3g==" crossorigin="anonymous"></script>
+    <!-- Corresponding js and css files -->
+    <link rel="stylesheet" type="text/css" href="chat-app.css">
+    <script type="text/javascript" src="chat-app.js"></script>
+</head>
+<body>
+    <div id="content">
+        <h1 id="chat-app-title">JDB Chat App</h1>
+        <p id="chat-app-description">A free for all chat room</p>
+        <div id="register-container">
+            <h2 id="register-title">Create a Username</h2>
+            <div id="register-input-container">
+                <label for="register-input" id="register-input-label">Username:&nbsp;</label>
+                <input type="text" name="register-input" id="register-input">
+                <button id="register-input-submit">Submit</button>
+            </div>
+            <p id="register-input-error">Username is already taken.</p>
+        </div>
+        <div id="chat-connect-container">
+            <div id="create-room-connect-container">
+                <button id="create-room-button">Create New Room</button>
+                <p id="generated-code">None</p>
+            </div>
+            <div id="join-room-connect-container">
+                    <label for="join-room-input" id="join-room-input-label">Join Code:&nbsp;</label>
+                    <input type="text" name="join-room-input" id="join-room-input">
+                    <button id="join-room-input-submit">Submit</button>
+            </div>
+        </div>
+        <p id="current-code">Current Code: </p>
+        <div id="chat-container">
+            <div id="display-chats-container">
+                
+            </div>
+            <div id="send-chat-container">
+                <input type="text" name="send-chat-input" id="send-chat-input">
+                <button id="send-chat-button">Send Chat</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
